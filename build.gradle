@@ -340,7 +340,7 @@ subprojects {
                     }
                 }
                 if(project.hasProperty("artifactoryPublishUsername")) {
-                    snapshotRepository(url: "https://repo.grails.org/grails/libs-snapshots-local") {
+                    snapshotRepository(url: "https://jukin.jfrog.io/jukin/libs-snapshots-local") {
                         authentication(userName: project.hasProperty("artifactoryPublishUsername") ? project.artifactoryPublishUsername : null,
                                 password: project.hasProperty("artifactoryPublishPassword") ?  project.artifactoryPublishPassword : null)
                     }
