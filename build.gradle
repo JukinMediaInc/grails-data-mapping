@@ -16,7 +16,7 @@ project.ext {
     groovyVersion = System.getProperty('groovyVersion') ?: '2.1.9'
     isTravisBuild = System.getenv().get("TRAVIS") == 'true'
 
-    projectVersion = "3.1.6"
+    projectVersion = "3.1.6.jukin"
     // releaseType = "RELEASE"
     releaseType = "BUILD-SNAPSHOT"
     isCiBuild = project.hasProperty("isCiBuild")
@@ -340,7 +340,7 @@ subprojects {
                     }
                 }
                 if(project.hasProperty("artifactoryPublishUsername")) {
-                    snapshotRepository(url: "https://jukin.jfrog.io/jukin/libs-snapshots-local") {
+                    snapshotRepository(url: "https://jukin.jfrog.io/jukin/libs-snapshot-local") {
                         authentication(userName: project.hasProperty("artifactoryPublishUsername") ? project.artifactoryPublishUsername : null,
                                 password: project.hasProperty("artifactoryPublishPassword") ?  project.artifactoryPublishPassword : null)
                     }
