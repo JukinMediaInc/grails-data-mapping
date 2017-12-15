@@ -327,11 +327,11 @@ subprojects {
             }
 
             repositories.mavenDeployer {
-                if(!isBuildSnapshot) {
-                    beforeDeployment { MavenDeployment deployment ->
-                        signing.signPom(deployment)
-                    }
-                }
+//                if(!isBuildSnapshot) {
+//                    beforeDeployment { MavenDeployment deployment ->
+//                        signing.signPom(deployment)
+//                    }
+//                }
 
                 if(project.hasProperty("sonatypeUsername")) {
                     repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
